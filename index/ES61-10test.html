@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES61-10test</title>
+    <link rel='stylesheet' media='screen' href='bootstrap.min.css'>
+    <link rel="shortcut icon" href="./src/img/bitbug_favicon.ico" />
+
+    <style>
+  
+        .container{
+            margin-bottom: 10px;
+        }
+        .row{
+            margin-bottom: 20px;
+        }
+        .row .row{
+            margin-bottom: 20px;
+        }
+   
+        [class*="col-"]{     /* 多重选样式 */
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: yellowgreen;
+            background-color: rbgb(10,10,10,.10);
+            border: solid tomato;
+            border: solid 1px;
+        }
+        .table_t{
+            background-color: tomato;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h2>点击</h2>
+        <div class="row">
+        <div class="col-md-1">111</div>
+        <div class="col-md-1">22</div>
+        <div class="col-md-1">33</div>
+    </div>
+    </div>
+    <script>
+        let saber = document.getElementsByClassName('col-md-1')
+        for(let i = 0;i<saber.length;i++){
+            saber[i].onclick = function(){
+                //修改颜色
+  
+                this.style.background = 'pink';
+            }
+        }
+       
+        const SABER2 = "saber2";
+        //一定要赋初始值，不然会报错
+        //一般常量用大写（不成文规定）
+        //常量值不会被修改,数组也是如此
+        //const XL;
+        //const也是一个块级作用域
+        {
+            const SABER3 = "SABER3"//外面的console接收不到
+        }
+        //console.log(SABER3);
+
+        // const SABER5 = {
+        //     name:"k",
+        //     age:'10',
+        //     saber_son :function(){ console.log("saber的儿子"); }
+        // }
+        // let { name,age,saber_son } = SABER5;//结构赋值，可以节省SABER5.name等等的数组写法
+        // console.log(name);
+        // console.log(age);
+        // console.log(saber_son);
+
+        //模板字符串
+        let love = "hi";
+        let love2 = ` ${love}+heiyo~`;//字符串内加入变量需要${}哦~
+        //console.log(love2);
+
+
+
+            let saber12_8_02 = n => {
+  
+              return n;
+            }
+     
+            //console.log(saber12_8_02(20));
+
+        //rest参数
+        function saber12_8_03(...rest_zdy){
+            //加...可以解析数组，结果和arguments解析的对象结果不一样，rest参数是真数组，*但是只能放在最后一个参数
+            console.log(rest_zdy)
+
+        }
+        saber12_8_03('1','2','3');
+
+        
+
+
+    </script>
+
+
+
+</body>
+</html>

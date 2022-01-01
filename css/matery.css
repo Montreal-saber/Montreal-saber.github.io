@@ -2,7 +2,7 @@
 /*小屏幕下(手机类)的样式*/
 @media only screen and (max-width: 601px) {
     .container {
-        width: 95%;
+        width: 980%;
     }
 }
 
@@ -32,6 +32,9 @@
         max-width: 1250px;
     }
 }
+
+
+
 
 body {
     background-color: #eaeaea;
@@ -241,11 +244,11 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    background-image: linear-gradient(to right, #f38302 0%, #e68a4d 100%);
 }
 
 .text-color {
-    color: #0f9d58 !important;
+    color: #dbdf10 !important;
 }
 
 .white-color {
